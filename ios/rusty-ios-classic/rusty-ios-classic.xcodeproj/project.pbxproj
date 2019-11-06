@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3873D2823735AB200344A9C /* librustylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3873D2723735A8100344A9C /* librustylib.a */; };
 		F39C84B72370AA040051E300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39C84B62370AA040051E300 /* AppDelegate.swift */; };
 		F39C84B92370AA040051E300 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39C84B82370AA040051E300 /* SceneDelegate.swift */; };
 		F39C84BB2370AA040051E300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39C84BA2370AA040051E300 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F3873D2723735A8100344A9C /* librustylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librustylib.a; path = ../libs/librustylib.a; sourceTree = "<group>"; };
 		F39C84B32370AA040051E300 /* rusty-ios-classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rusty-ios-classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39C84B62370AA040051E300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F39C84B82370AA040051E300 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3873D2823735AB200344A9C /* librustylib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3873D2623735A8100344A9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3873D2723735A8100344A9C /* librustylib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F39C84AA2370AA040051E300 = {
 			isa = PBXGroup;
 			children = (
 				F39C84B52370AA040051E300 /* rusty-ios-classic */,
 				F39C84B42370AA040051E300 /* Products */,
+				F3873D2623735A8100344A9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +234,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = ../include/rustylib.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -275,6 +288,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = ../include/rustylib.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -285,14 +299,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = ../include;
 				INFOPLIST_FILE = "rusty-ios-classic/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = ../libs;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rusty-ios-classic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ../include/rustylib.h;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,14 +321,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = ../include;
 				INFOPLIST_FILE = "rusty-ios-classic/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = ../libs;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rusty-ios-classic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ../include/rustylib.h;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

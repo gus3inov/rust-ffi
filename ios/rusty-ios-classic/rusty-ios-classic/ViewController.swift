@@ -12,9 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let result = hello("Mars")
+
+        let s_result = String(cString: result!)
+        hello_release(UnsafeMutablePointer(mutating: result))
+        print(s_result)
     }
-
-
 }
-
